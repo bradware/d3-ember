@@ -1,0 +1,49 @@
+var data = [{
+    "Client": "ABC",
+    "sale": "202",
+    "year": "2000"
+}, {
+    "Client": "ABC",
+    "sale": "215",
+    "year": "2002"
+}, {
+    "Client": "ABC",
+    "sale": "179",
+    "year": "2004"
+}, {
+    "Client": "ABC",
+    "sale": "199",
+    "year": "2006"
+}, {
+    "Client": "ABC",
+    "sale": "134",
+    "year": "2008"
+}, {
+    "Client": "ABC",
+    "sale": "176",
+    "year": "2010"
+}, {
+    "Client": "XYZ",
+    "sale": "100",
+    "year": "2000"
+}, {
+    "Client": "XYZ",
+    "sale": "215",
+    "year": "2002"
+}, {
+    "Client": "XYZ",
+    "sale": "179",
+    "year": "2004"
+}, {
+    "Client": "XYZ",
+    "sale": "199",
+    "year": "2006"
+}, {
+    "Client": "XYZ",
+    "sale": "134",
+    "year": "2008"
+}, {
+    "Client": "XYZ",
+    "sale": "176",
+    "year": "2013"
+}];
