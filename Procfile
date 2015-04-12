@@ -1,1 +1,1 @@
-web: ember server
+web: npm run start
