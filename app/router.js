@@ -1,9 +1,12 @@
 import Ember from 'ember';
-import config from './config/environment';
 
-var Router = Ember.Router.extend({
-  location: config.locationType
+var Router = Ember.Router.extend({});
+
+Router.map(function() {
+  this.resource('charts', { path: '/' }, function() {
+    this.route('column', { path: '/column' }, function() {});
+    this.route('line', { path: '/line' });
+  });
 });
 
-export default Router.map(function() {
-});
+export default Router;

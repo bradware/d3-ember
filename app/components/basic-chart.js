@@ -1,7 +1,6 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-
 	onRender: function() {
 		var mockdata = [4, 8, 15, 16, 23, 42];
 		var scalarValue = d3.scale.linear()
@@ -51,8 +50,9 @@ export default Ember.Component.extend({
 			.append('g')
 			.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-		d3.tsv('../../public/data/letter-data.txt', type, function(error, data) {
-			y.domain(data.map(function(d) { return d.name; }));
+		d3.tsv('http://localhost:4200/data/letter-data.txt', type, function(error, data) {
+			y.domain(data.map(function(d) {
+				return d.name; }));
 			x.domain([0, d3.max(data, function(d) { return d.value; })]);
 
 			chart.append('g')
