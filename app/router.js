@@ -5,7 +5,9 @@ var Router = Ember.Router.extend({});
 Router.map(function() {
   this.resource('charts', { path: '/' }, function() {
     this.route('column', { path: '/column' }, function() {});
-    this.route('line', { path: '/line' });
+    this.resource('line', { path: '/line' },function() {
+      this.route('dynamic', { path: '/dynamic'}, function() {});
+    });
   });
 });
 
