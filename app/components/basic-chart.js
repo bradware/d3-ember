@@ -50,7 +50,7 @@ export default Ember.Component.extend({
 			.append('g')
 			.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-		d3.tsv('https://d3-ember.herokuapp.com/data/letter-data.txt', type, function(error, data) {
+		d3.tsv('https://localhost:4200/data/letter-data.txt', type, function(error, data) {
 			y.domain(data.map(function(d) {
 				return d.name; }));
 			x.domain([0, d3.max(data, function(d) { return d.value; })]);
@@ -82,3 +82,5 @@ export default Ember.Component.extend({
 		});
 	}.on('didInsertElement')
 });
+
+//https://d3-ember.herokuapp.com/data/letter-data.txt
