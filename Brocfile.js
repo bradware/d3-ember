@@ -19,6 +19,7 @@ var app = new EmberApp();
 
 app.import('bower_components/d3/d3.min.js');
 app.import('bower_components/jquery/dist/jquery.min.js');
+app.import('bower_components/bootstrap/dist/js/bootstrap.min.js');
 
 module.exports = app.toTree();
 

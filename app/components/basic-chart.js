@@ -1,28 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-	onRender: function() {
-		var mockdata = [4, 8, 15, 16, 23, 42];
-		var scalarValue = d3.scale.linear()
-			.domain([0, d3.max(mockdata)]) //using mock data
-			.range([0, 420]);
-
-		var chart = d3.select('.chart');
-		var bar = chart.selectAll('div');
-		var barUpdate = bar.data(mockdata); //using mock data
-		var barEnter = barUpdate.enter().append('div');
-		barEnter.style('width', function (d) {
-			return scalarValue(d) + 'px';
-		});
-		barEnter.text(function (d) {
-			return d;
-		});
-	}.on('didInsertElement'),
-
 	onRenderDynamic: function() {
 		var margin = {top: 10, right: 30, bottom: 30, left: 30},
-			width = 500 - margin.left - margin.right,
-			height = 600 - margin.top - margin.bottom;
+			width = 600 - margin.left - margin.right,
+			height = 700 - margin.top - margin.bottom;
 
 		var x = d3.scale.linear() //uses ordinal
 			.range([0, width]); //this needs to be width, 0
@@ -50,7 +32,7 @@ export default Ember.Component.extend({
 			.append('g')
 			.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-		d3.tsv('https://d3-ember.herokuapp.com/data/letter-data.txt', type, function(error, data) {
+		d3.tsv('http://localhost:4200/data/letter-data.txt', type, function(error, data) {
 			y.domain(data.map(function(d) {
 				return d.name; }));
 			x.domain([0, d3.max(data, function(d) { return d.value; })]);
@@ -84,3 +66,4 @@ export default Ember.Component.extend({
 });
 
 // http://localhost:4200/data/letter-data.txt if running on local server using 'ember server' command
+// https://d3-ember.herokuapp.com/data/letter-data.txt when running on heroku server
