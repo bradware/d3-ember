@@ -2,6 +2,8 @@
 
 Repo to convey how to use D3 as a component for the Ember.js framework.
 
+Visit (https://d3-ember.herokuapp.com)
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
