@@ -15,9 +15,9 @@
 /libpeerconnection.log
 npm-debug.log
 testem.log
-.DS_Store
+*.DS_Store
 .idea/
 /*.env
-.editorconfig
-.travis.yml
+*.editorconfig
+*.travis.yml
 
