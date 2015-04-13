@@ -2,7 +2,7 @@
 
 Repo to convey how to use D3 as a component for the Ember.js framework.
 
-Visit https://d3-ember.herokuapp.com or run locally using the 'ember server' command at the dir root.
+Visit https://d3-ember.herokuapp.com or run locally using the `ember server` command at the app's root dir.
 
 ## Prerequisites
 
