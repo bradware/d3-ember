@@ -20,7 +20,7 @@ export default Ember.Component.extend({
 	}.on('didInsertElement'),
 
 	onRenderDynamic: function() {
-		var margin = {top: 20, right: 30, bottom: 30, left: 30},
+		var margin = {top: 10, right: 30, bottom: 30, left: 30},
 			width = 500 - margin.left - margin.right,
 			height = 600 - margin.top - margin.bottom;
 
@@ -50,7 +50,7 @@ export default Ember.Component.extend({
 			.append('g')
 			.attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
-		d3.tsv('https://localhost:4200/data/letter-data.txt', type, function(error, data) {
+		d3.tsv('http://localhost:4200/data/letter-data.txt', type, function(error, data) {
 			y.domain(data.map(function(d) {
 				return d.name; }));
 			x.domain([0, d3.max(data, function(d) { return d.value; })]);
