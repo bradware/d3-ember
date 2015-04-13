@@ -3,8 +3,8 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 	onRenderDynamic: function() {
 		var margin = {top: 10, right: 30, bottom: 30, left: 30},
-			width = 600 - margin.left - margin.right,
-			height = 700 - margin.top - margin.bottom;
+			width = 650 - margin.left - margin.right,
+			height = 650 - margin.top - margin.bottom;
 
 		var x = d3.scale.linear() //uses ordinal
 			.range([0, width]); //this needs to be width, 0
