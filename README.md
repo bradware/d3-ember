@@ -1,4 +1,4 @@
-# D3/Ember App
+# D3 & Ember App
 
 Repo to convey how to use D3 as a component for the Ember.js framework.
 
