@@ -1,4 +1,6 @@
-# D3 & Ember App
+# D3-Ember
+
+![D3-Ember](https://github.com/bradware/d3-ember/blob/master/public/d3-ember.png)
 
 Repo to convey how to use D3 as a component for the Ember.js framework.
 
